@@ -1,0 +1,33 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+
+  "extends": "eslint:recommended",
+
+  "env": {
+    "browser": false,
+    "node": true,
+    "commonjs": false,
+    "worker": false,
+    "mocha": true,
+    "jquery": false
+  },
+
+  "globals": {
+    "Symbol" : false,
+    "Proxy" : false,
+    "Map": false,
+    "Set": false,
+    "Promise": false
+  },
+
+  "rules": {
+     "no-use-before-define": "error",
+    "eqeqeq": "error",
+    "curly": "error",
+    "quotes": [ "error", "single", { "avoidEscape": true, "allowTemplateLiterals": true } ],
+    "semi": ["error", "always"],
+    "no-console": "off"
+  }
+}
