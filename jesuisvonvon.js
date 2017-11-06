@@ -113,7 +113,6 @@ function end_loop() {
   return Promise.reject('SYNTAXERRRSYNTAXERRR !!!!!!LOOP NOT ENDED!!!!!! SYNTAXERRRSYNTAXERRR');
 }
 
-
 function comma() {
   return new Promise((resolve) => {
     READING_CB = (key) => {
@@ -129,8 +128,7 @@ function comma() {
 
 
 
-// COMPILER
-
+// WIZARD
 const args = process.argv.slice(2);
 
 if (args.length !== 1) {
@@ -139,25 +137,26 @@ if (args.length !== 1) {
 }
 
 const filename_arg = args[0].endsWith('.vonvon') ? args[0] : args[0]+'.vonvon';
-
-
 const FILE = filename_arg.endsWith('.vonvon') ? path.join(__dirname, filename_arg) : path.join(__dirname, filename_arg)+'.vonvon';
 
 if (!fs.existsSync(FILE)) { throw new Error('FILE "'+filename_arg+'" DOES NOT EXIST !!!!'); }
 
-// TRANSPILING
+// MAGIC
 const FILECONTENT = fs.readFileSync(FILE, 'utf8');
-let processed = FILECONTENT.replace(/[^vonvon|je|suis|bonjour|!|,|[|\]]/g, '');
-processed = processed.replace(/vonvon/g, '1');
-processed = processed.replace(/je/g, '2');
-processed = processed.replace(/suis/g, '3');
-processed = processed.replace(/bonjour/g, '4');
-processed = processed.replace(/!/g, '5');
-processed = processed.replace(/,/g, '6');
-processed = processed.replace(/\[/g, '7');
-processed = processed.replace(/]/g, '8');
+let processed = FILECONTENT.replace(/[0-9]/ig, '');
 
-// COMPILING
+processed = processed.replace(/o+/gi, 'o');
+processed = processed.replace(/vonvon/gi, '1');
+processed = processed.replace(/je/gi, '2');
+processed = processed.replace(/suis/gi, '3');
+processed = processed.replace(/bonjour/gi, '4');
+processed = processed.replace(/!/gi, '5');
+processed = processed.replace(/,/gi, '6');
+processed = processed.replace(/\[/gi, '7');
+processed = processed.replace(/]/gi, '8');
+processed = processed.replace(/[^0-9]/gi, '');
+
+// MOAR MAGIC
 for (let i = 0; i < processed.length; i++) {
   INS.push(Number.parseInt(processed.charAt(i)));
 }
@@ -167,7 +166,7 @@ NSA = INS.length;
 
 
 
-
+// SORCERY
 function dostuff() {
   if (CIA >= NSA) { return Promise.resolve(); }
 
@@ -201,7 +200,7 @@ function dostuff() {
 dostuff()
 .then(() => { process.exit(0); })
 .catch((err) => {
-  console.log();
+  console.log('');
   console.error(err.message);
   process.exit();
 });
