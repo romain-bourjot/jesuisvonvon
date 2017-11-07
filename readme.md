@@ -51,6 +51,52 @@ vooooooOOOOoOOOOOooOOOOOnvoooooOOooOOoOOooOoOn[je,bonjour]
 
 Line breaks are converted to 0.
 
+## Examples
+
+Code examples are placed in the vonvon directory.
+
+### ft_print_alphabet
+
+Prints the alphabet (lower case).
+
+Result:
+```
+abcdefghijklmnopqrstuvwxyz
+```
+
+### ft_print_reverse_alphabet
+
+Prints the alphabet (lowercase) in reverse order.
+
+Result:
+
+```
+zyxwvutsrqponmlkjihgfedcba
+```
+
+### ft_print_numbers
+
+Prints integers from 0 to 9
+
+Result:
+```
+0123456789
+```
+
+### ft_print_negative
+Prints N if you type a negative number, P otherwise.
+
+### ft_print_comb
+Prints all different combinations of three different numbers in increasing order.
+
+Result:
+```
+012, 013, 014, 015, 016, 017, 018, 019, 023, ..., 789
+```
+
+* 987 is not displayed because 789 is already there.
+* 001 is not displayed because it has 0 twice.  
+
 ## String compiler
 
 > The string compiler is tool that will create a .vonvon file which will output specified string.

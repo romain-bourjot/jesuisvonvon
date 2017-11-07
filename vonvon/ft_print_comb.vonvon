@@ -1,0 +1,224 @@
+Memory structure:
+temp0 i_counter j_counter k_counter i_data j_data k_data comma space witness
+
+Goto i_counter
+je
+
+Init i_counter to 8
+vonvon vonvon vonvon vonvon vonvon vonvon vonvon vonvon
+
+Init i_data to '0' (48)
+je je je
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+
+Init comma
+je je je
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvon
+
+Init space
+je
+
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvon
+
+Set witness to 0
+je [suis]
+
+
+Return to i_counter
+!!!!!!!!
+
+[
+
+
+///////////////////// COPY I_COUNTER TO J_COUNTER
+Set j_counter to 0
+je[suis]
+
+Set temp to 0
+!![suis]
+Go to i_counter
+je
+
+j_counter ++ and temp++ while i_counter -- > 0
+[
+! vonvon temp++
+jejevonvon j_counter++
+! suis i_counter--
+]
+
+Copy temp to i_counter
+![suisjevonvon!] now on temp
+
+je je j_counter ICI
+! on i_counter
+
+//////////////////// COPY I_DATA TO J_DATA
+Set temp to 0
+![suis]
+
+Set J_Data to 0
+je je je je je [suis]
+
+Goto i_data
+!
+
+temp ++ and j_data ++ while i_data -- > 0
+[
+! ! ! ! vonvon
+je je je je je vonvon
+! suis
+]
+
+Copy temp to i_data and go to temp
+! ! ! ! [ suis je je je je vonvon ! ! ! ! ]
+
+j_data++
+je je je je je vonvon
+
+
+Go to j_counter
+! ! !
+
+[
+
+
+
+
+
+  at j_counter
+
+  ///////////////////// COPY J_COUNTER TO K_COUNTER
+  set temp to 0
+  !![suis]
+  set k_counter to 0
+  je je je [suis]
+
+  go to j_counter
+  !
+
+  k_counter ++ and temp++ while j_counter -- > 0
+  [
+  je vonvon k_counter++
+  ! ! ! vonvon temp ++
+  je je suis j_counter--
+  ]
+
+
+  Copy temp to j_counter
+  !![suisjejevonvon!!] now on temp
+  je je je ICI
+
+  sur k_counter
+
+  /////////////////// COPY J_DATA TO K_DATA
+  Set temp to 0
+  !!![suis]
+
+  Set k_Data to 0
+  je je je je je je [suis]
+
+  Goto j_data
+  !
+
+  temp ++ and k_data ++ while j_data -- > 0
+  [
+  ! ! ! ! ! vonvon
+  je je je je je je vonvon
+  ! suis sur j_data
+  ]
+
+  Copy temp to j_data and go to temp
+  ! ! ! ! ! [ suis je je je je je vonvon ! ! ! ! ! ]
+
+  k_data++
+  je je je je je je vonvon
+
+
+  Go to k_counter
+  ! ! !
+
+  [
+
+    go to witness
+    je je je je je je
+
+    [
+      print comma
+      !! bonjour
+
+      print space
+      je bonjour
+
+      je go to witness
+      [suis]
+    ]
+
+    set witness to 1
+    vonvon
+    goto k_counter
+    ! ! ! ! ! !
+
+
+
+    print i_data
+    je bonjour
+
+    print j_data
+    je bonjour
+
+    print k_data
+    je bonjour
+
+    k_data++
+    vonvon
+
+
+
+    goto k_counter
+    ! ! !
+
+
+
+    k_counter --
+    suis
+  ]
+
+  got to j_data
+  je je
+  j_data++
+  vonvon
+
+
+  got to j_counter
+  ! ! !
+
+  j_counter --
+  suis
+]
+
+je je
+
+must be at i_data
+
+
+
+
+
+increase i_data
+vonvon
+
+goto i_counter and decrease
+!!! suis
+]

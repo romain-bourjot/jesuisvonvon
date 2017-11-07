@@ -1,0 +1,24 @@
+counter = 10
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+
+je data = 48
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+
+go to counter
+!
+
+loop
+[
+
+  print data
+  je bonjour
+  data++
+  vonvon
+
+  counter--
+  ! suis
+]

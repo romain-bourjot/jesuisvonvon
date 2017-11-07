@@ -1,0 +1,34 @@
+counter = 26
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvon
+
+je data = 122
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvonvon
+vonvonvonvon
+
+go to counter
+!
+
+loop
+[
+
+  print data
+  je bonjour
+  data--
+  suis
+
+  counter--
+  ! suis
+]
