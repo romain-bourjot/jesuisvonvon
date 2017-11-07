@@ -1,11 +1,16 @@
 {
   "name": "jesuisvonvon",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "jesuisvonvon.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Romain Bourjot <romain.bourjot@gmail.com> (https://romain-bourjot.fr/)",
+  "license": "CECILL-C",
+  "keywords": [ "esolang", "brainfuck", "jesuisvonvon", "regex" ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/romain-bourjot/jesuisvonvon"
+  }
 }
