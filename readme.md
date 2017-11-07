@@ -38,7 +38,7 @@ lOlLOLO45vonVOnvon41[NOP
 jE
 
 
-,bonBONjOURmoije]
+,bonBONjOURmoi]
 
 This program prints what you type.
 ```
