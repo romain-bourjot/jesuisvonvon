@@ -43,7 +43,9 @@ let INS = [];
 let READING = false;
 let READING_CB = () => { return; };
 const stdin = process.stdin;
-stdin.setRawMode(true);
+if (stdin.isTTY && stdin.setRawMode) {
+    stdin.setRawMode(true);
+}
 stdin.resume();
 stdin.setEncoding('utf8');
 stdin.on('data', function (key) {
@@ -154,9 +156,14 @@ if (args.length !== 1) {
     process.exit();
 }
 const filename_arg = args[0].endsWith('.vonvon') ? args[0] : args[0] + '.vonvon';
-const FILE = filename_arg.endsWith('.vonvon')
-    ? path.join(__dirname, filename_arg)
-    : path.join(__dirname, filename_arg) + '.vonvon';
+// Resolve file path relative to current working directory, or if absolute/relative path provided use it directly
+let FILE;
+if (path.isAbsolute(filename_arg) || filename_arg.startsWith('./') || filename_arg.startsWith('../')) {
+    FILE = filename_arg;
+}
+else {
+    FILE = path.join(process.cwd(), filename_arg);
+}
 if (!fs.existsSync(FILE)) {
     throw new Error('FILE "' + filename_arg + '" DOES NOT EXIST !!!!');
 }

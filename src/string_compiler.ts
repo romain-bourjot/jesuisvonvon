@@ -36,4 +36,5 @@ for (let i = 0; i < str.length; i++) {
   compiled += '\r\nbonjour ';
 }
 
-fs.writeFileSync(path.join(__dirname, filename), compiled);
+// Write to current working directory instead of __dirname (which would be dist/)
+fs.writeFileSync(path.join(process.cwd(), filename), compiled);
