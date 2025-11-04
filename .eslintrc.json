@@ -1,33 +1,33 @@
 {
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 6
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
 
-  "extends": "eslint:recommended",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+
+  "plugins": ["@typescript-eslint"],
 
   "env": {
     "browser": false,
     "node": true,
-    "commonjs": false,
-    "worker": false,
-    "mocha": true,
-    "jquery": false
-  },
-
-  "globals": {
-    "Symbol" : false,
-    "Proxy" : false,
-    "Map": false,
-    "Set": false,
-    "Promise": false
+    "es2020": true
   },
 
   "rules": {
-     "no-use-before-define": "error",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": "error",
     "eqeqeq": "error",
     "curly": "error",
     "quotes": [ "error", "single", { "avoidEscape": true, "allowTemplateLiterals": true } ],
     "semi": ["error", "always"],
-    "no-console": "off"
+    "no-console": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "warn"
   }
 }
