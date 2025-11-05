@@ -2,8 +2,12 @@
   "name": "jesuisvonvon",
   "version": "2.0.0",
   "description": "",
-  "main": "jesuisvonvon.js",
+  "main": "dist/jesuisvonvon.js",
+  "types": "dist/jesuisvonvon.d.ts",
   "scripts": {
+    "build": "tsc",
+    "prebuild": "rm -rf dist",
+    "watch": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Romain Bourjot <romain.bourjot@gmail.com> (https://romain-bourjot.fr/)",
@@ -12,5 +16,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/romain-bourjot/jesuisvonvon"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.54.0",
+    "typescript": "^5.3.0"
   }
 }
